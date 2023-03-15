@@ -1,3 +1,9 @@
 WebShopNet/API/appsettings.json
 WebShopNet/API/shop.db
 WebShopNet/API/bin/Debug/net7.0/appsettings.json
+WebShopNet/API/bin
+WebShopNet/API/obj
+WebShopNet/Core/obj
+WebShopNet/Core/bin
+WebShopNet/Infrastructure/bin
+WebShopNet/Infrastructure/obj
