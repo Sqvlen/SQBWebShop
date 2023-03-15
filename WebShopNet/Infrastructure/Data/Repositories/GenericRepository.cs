@@ -2,7 +2,7 @@
 using Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Data;
+namespace Infrastructure.Data.Repositories;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
@@ -18,7 +18,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         return await _context.Set<T>().FindAsync(id);
     }
 
-    public async Task<IReadOnlyList<T>> GetListAllAsync()
+    public async Task<IReadOnlyList<T>> ListAllAsync()
     {
         return await _context.Set<T>().ToListAsync();
     }
