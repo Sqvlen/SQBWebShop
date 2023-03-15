@@ -144,3 +144,5 @@ D:\GitHub\Repo\SQBWebShop\WebShopNet\API\obj\Debug\net7.0\refint\API.dll
 D:\GitHub\Repo\SQBWebShop\WebShopNet\API\obj\Debug\net7.0\API.pdb
 D:\GitHub\Repo\SQBWebShop\WebShopNet\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 D:\GitHub\Repo\SQBWebShop\WebShopNet\API\obj\Debug\net7.0\ref\API.dll
+D:\GitHub\Repo\SQBWebShop\WebShopNet\API\bin\Debug\net7.0\AutoMapper.dll
+D:\GitHub\Repo\SQBWebShop\WebShopNet\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
