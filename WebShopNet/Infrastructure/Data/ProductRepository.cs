@@ -15,7 +15,10 @@ public class ProductRepository : IProductRepository
     
     public async Task<Product> GetProductByIdAsync(int id)
     {
-        var product = await _context.Products.FindAsync(id);
+        var product = await _context.Products
+            .Include(product => product.ProductType)
+            .Include(product => product.ProductBrand)
+            .FirstOrDefaultAsync(product => product.Id == id);
         if (product != null)
             return product;
         else
@@ -24,12 +27,16 @@ public class ProductRepository : IProductRepository
 
     public async Task<IReadOnlyList<Product>> GetProductsAsync()
     {
-        return await _context.Products.ToListAsync();
+        return await _context.Products
+            .Include(product => product.ProductType)
+            .Include(product => product.ProductBrand)
+            .ToListAsync();
     }
 
     public async Task<IReadOnlyList<ProductBrand>> GetProductBrandsAsync()
     {
-        return await _context.ProductBrands.ToListAsync();
+        return await _context.ProductBrands
+            .ToListAsync();
     }
 
     public async Task<IReadOnlyList<ProductType>> GetProductTypesAsync()
