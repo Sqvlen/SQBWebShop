@@ -45,7 +45,7 @@ public class ProductsController : BaseApiController
         var product = await _productsRepository
             .GetEntityWithSpecification(specification);
 
-        return _mapper.Map<Product, ProductToReturnDto>(product);
+        return Ok(_mapper.Map<Product, ProductToReturnDto>(product));
     }
 
     [HttpGet("brands")]

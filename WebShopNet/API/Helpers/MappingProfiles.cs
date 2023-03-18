@@ -16,6 +16,8 @@ public class MappingProfiles: Profile
             .ForMember(destinationMember => 
                 destinationMember.ProductType, 
                 options => 
-                    options.MapFrom(source => source.ProductType.Name));
+                    options.MapFrom(source => source.ProductType.Name))
+            .ForMember(destinationMember => destinationMember.PictureUrl,
+                options => options.MapFrom<ProductUrlResolver>());
     }
 }
