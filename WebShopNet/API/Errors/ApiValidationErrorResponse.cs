@@ -2,7 +2,7 @@
 
 public class ApiValidationErrorResponse : ApiResponse
 {
-    public ApiValidationErrorResponse(int statusCode, string message = null) : base(statusCode, message)
+    public ApiValidationErrorResponse() : base(400)
     {
     }
 
